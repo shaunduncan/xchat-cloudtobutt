@@ -47,12 +47,13 @@ def cloudtobutt(word, word_eol, userdata):
     client
     """
     try:
+        nick = word[0]
         message = word_eol[1]
     except IndexError:
         return xchat.EAT_NONE
 
-    # Prevent recursive crap
-    if message.count('cloud') == 0:
+    # Prevent recursive crap and don't replace my messages
+    if message.count('cloud') == 0 or xchat.nickcmp(nick, xchat.get_info('nick')) == 0:
         return xchat.EAT_NONE
 
     xchat.emit_print(userdata, word[0], message.replace('cloud', 'butt'))
