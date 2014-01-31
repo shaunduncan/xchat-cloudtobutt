@@ -2,7 +2,7 @@ xchat-cloudtobutt
 ==============
 
 XChat/Hexchat plugin that replaces the word "cloud" with "butt". Simply install
-`cloudtobutt.py` in your addons directory and perform `/py load colorize.py` or
+`cloudtobutt.py` in your addons directory and perform `/py load cloudtobutt.py` or
 restart xchat/hexchat.
 
 
