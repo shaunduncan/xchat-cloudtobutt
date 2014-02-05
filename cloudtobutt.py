@@ -23,13 +23,14 @@ LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
 OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN
 THE SOFTWARE.
 """
+from __future__ import print_function
 
 import xchat
 
 
 __module_name__ = 'cloudtobutt'
 __module_author__ = 'Shaun Duncan'
-__module_version__ = '0.1'
+__module_version__ = '0.2'
 __module_description__ = 'Replaces "cloud" with "butt"'
 
 
@@ -37,7 +38,7 @@ def on_unload(data):
     """
     Callback for module unload
     """
-    print '%s plugin v%s unloaded' % (__module_name__, __module_version__)
+    print('{0} plugin v{1} unloaded'.format(__module_name__, __module_version__))
 
 
 def cloudtobutt(word, word_eol, userdata):
@@ -68,4 +69,4 @@ xchat.hook_print('Private Message', cloudtobutt, userdata='Private Message')
 xchat.hook_print('Private Message to Dialog', cloudtobutt, userdata='Private Message to Dialog')
 
 
-print '%s plugin v%s loaded' % (__module_name__, __module_version__)
+print('{0} plugin v{1} loaded'.format(__module_name__, __module_version__))
